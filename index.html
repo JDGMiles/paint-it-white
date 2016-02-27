@@ -41,8 +41,9 @@
 
 <script type="text/javascript">
 var moves=0;
-var startstate="001010001001010111000101001110011111010101010100001101101000010101011101100110001010101100010101010101010100001010101000010001010101010111001000101110000000000000000000000000000000010010010001000101010101110111101010010001000101010100100100111010010001010101110100100110101010010001111101010100100100101011011000101001010100100111";
+var startstate="001010001001010111000101001110011111010101010100001111101000010101011101100110001010101100010101010101010100001010101000010001010101010111001000101110000000000000000000000000000000010010010001000101010101110111101010010001000101010100100100111010010001010101110100100110101010010001111101010100100100101011011000101001010100100111";
 var count=0;
+var notwon=0;
 var tablecolumns=30;
 var tablerows=11;
 var tablecontentsmarkup=" ";
@@ -73,7 +74,7 @@ function checkboard(){
 	for(var i=0; i<tablecolumns*tablerows; i++){if(cellstate[i]==0){notwon=1;}}
 	if(notwon==0){
 		document.getElementById("moves").innerHTML=moves;
-		if(moves<99999){document.getElementById("rank").innerHTML="<span style=\"color:#835511; text-decoration:underline;\">RANK: N/A</span>";}
+		document.getElementById("rank").innerHTML="<span style=\"color:#835511; text-decoration:underline;\">RANK: N/A</span>";
 		if(moves<724){document.getElementById("rank").innerHTML="<span style=\"color:#667700; text-decoration:underline;\">RANK: U</span>";}
 		if(moves<633){document.getElementById("rank").innerHTML="<span style=\"color:purple; text-decoration:underline;\">RANK: G</span>";}
 		if(moves<552){document.getElementById("rank").innerHTML="<span style=\"color:#886666; text-decoration:underline;\">RANK: F</span>";}
