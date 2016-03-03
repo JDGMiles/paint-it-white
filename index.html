@@ -27,8 +27,8 @@
 	<div id="popup2" class="overlay">
 		<div class="popup2">
 			<a class="close" style="right: 30px;" href="index.html">&times;</a>
-			<div id="rank" style="font-family:Georgia; color:white; text-align:center; font-size:400%"></div><br>
-			<a style="font-family:Georgia; font-size:300%; color:white; text-align:center;">You painted everything white in <span id="moves">0</span> moves.</a><br>
+			<div id="rank" style="font-family:Georgia; color:white; text-align:center; font-size:400%"></div><br><br>
+			<a style="font-family:Georgia; font-size:300%; color:white; text-align:center;"><span id="moves">Click the cross to close this popup and start the game.</span><br></a><br>
 		</div>
 	</div>
 
@@ -73,7 +73,7 @@ function checkboard(){
 	notwon=0;
 	for(var i=0; i<tablecolumns*tablerows; i++){if(cellstate[i]==0){notwon=1;}}
 	if(notwon==0){
-		document.getElementById("moves").innerHTML=moves;
+		document.getElementById("moves").innerHTML="You painted everything white in "+moves+" moves.";
 		document.getElementById("rank").innerHTML="<span style=\"color:#835511; text-decoration:underline;\">RANK: N/A</span>";
 		if(moves<724){document.getElementById("rank").innerHTML="<span style=\"color:#667700; text-decoration:underline;\">RANK: U</span>";}
 		if(moves<633){document.getElementById("rank").innerHTML="<span style=\"color:purple; text-decoration:underline;\">RANK: G</span>";}
