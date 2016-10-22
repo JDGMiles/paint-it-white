@@ -37,12 +37,12 @@ a:visited {color:#DD0000;}
 }
 
 .popup {
-  margin: 70px auto;
+  margin: 12px auto;
   padding: 20px;
   background: #181818;
   border: 2px solid #AAAAAA;
   border-radius: 20px;
-  width: 33%;
+  width: 460px;
   position: relative;
   transition: all 0s ease-in-out;
 }
